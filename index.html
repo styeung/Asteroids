@@ -31,15 +31,10 @@
     <script src="./lib/javascripts/bullet.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
-      var random_images = ["./lib/images/cat.jpg", "./lib/images/kanye.jpg"]
-      var num = Math.floor( Math.random() * random_images.length )
       var canvas = document.getElementById('canvas');
       var ctx = canvas.getContext('2d');
-
-			var img = new Image();
-			img.src = random_images[num];
-
-			$("body").keyup(function(event) {
+			
+			$("body").on("keydown", function(event) {
 				event.preventDefault();
 			});
 			
