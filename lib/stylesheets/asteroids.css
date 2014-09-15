@@ -13,6 +13,11 @@ h1 {
 }
 
 p {
+	text-align: center;
+	font-size: 25px;
+}
+
+.ammo {
 	font-size: 50px;
 	text-align: center;
 }
@@ -21,4 +26,36 @@ body {
 	font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 	width: 800px;
 	margin: auto;
+}
+
+.message-container {
+	position: relative;
+}
+
+.losing-message {
+	position: absolute;
+	display: none;
+	color: white;
+	font-weight: bold;
+	font-size: 80px;
+	left: 220px;
+	top: 200px;
+}
+
+.losing-message.active{
+	display: block;
+}
+
+.winning-message {
+	position: absolute;
+	display: none;
+	color: white;
+	font-weight: bold;
+	font-size: 80px;
+	left: 220px;
+	top: 200px;
+}
+
+.winning-message.active {
+	display: block;
 }

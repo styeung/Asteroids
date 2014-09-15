@@ -9,10 +9,17 @@
   </head>
   <body>
 		<h1>Kanye Asteroids</h1>
-		<p class="ammo">Ammo: 80</p>
+		<p class="ammo">Ammo: 50</p>
+		<div class="message-container">
+			<h2 class="losing-message">You Lose!</h2>
+			<h2 class="winning-message">You Win!</h2>
+		</div>
 		<div class="canvas-container">
 	    <canvas width="800" height="800" id="canvas"></canvas>
 		</div>
+		<p>Press 'up' or 'down' to move forward or backward.</p>
+		<p>Press 'left' or 'right' to change directions.</p>
+		<p>Press space to fire bullets.</p>
 		
     <script src="./lib/javascripts/utils.js"></script>
     <script src="./lib/javascripts/keymaster.js"></script>
