@@ -17,25 +17,20 @@
     if (this instanceof Asteroids.Asteroid) {
       var that = this;
       var img = new Image();
-      img.src = "./lib/images/kanyeface1.png"
+      img.src = "./assets/images/kanyeface1.png"
       var img2 = new Image()
-      img2.src = "./lib/images/kanyeface2.png"
+      img2.src = "./assets/images/kanyeface2.png"
       var d = new Date();
       if(d.getSeconds() % 2 === 0) {
-        ctx.drawImage(img, that.pos[0] - 25, that.pos[1] - 25, 50, 50);
+        ctx.drawImage(img, that.pos[0] - 22, that.pos[1] - 22, 45, 45);
       }
       else {
-        ctx.drawImage(img2, that.pos[0] - 25, that.pos[1] - 25, 50, 50);
+        ctx.drawImage(img2, that.pos[0] - 22, that.pos[1] - 22, 45, 45);
       }
     }
 
     if (this instanceof Asteroids.Ship) {
       var that = this;
-      var img3 = new Image();
-      img3.src = "./lib/images/jaya.png"
-      var img4 = new Image()
-      img4.src = "./lib/images/jayb.png"
-      var d = new Date();
 			ctx.beginPath();
 			ctx.moveTo(that.pos[0], that.pos[1]);
 			var coordinates_left = Asteroids.Util.convertDegreesToCoordinates(Asteroids.Util.wrapDegrees(that.degree + 20) % 360);
@@ -43,8 +38,8 @@
 			var coordinates_right = Asteroids.Util.convertDegreesToCoordinates(Asteroids.Util.wrapDegrees(that.degree - 20) % 360);
 			var right_adjustment = Math.sqrt(Math.pow(coordinates_right[0], 2) + Math.pow(coordinates_right[1], 2));
 
-			ctx.lineTo(that.pos[0] + coordinates_left[0]/left_adjustment*45*-1, that.pos[1] + coordinates_left[1]/left_adjustment*45*-1)
-			ctx.lineTo(that.pos[0] + coordinates_right[0]/right_adjustment*45*-1, that.pos[1] + coordinates_right[1]/right_adjustment*45*-1)
+			ctx.lineTo(that.pos[0] + coordinates_left[0]/left_adjustment*35*-1, that.pos[1] + coordinates_left[1]/left_adjustment*35*-1)
+			ctx.lineTo(that.pos[0] + coordinates_right[0]/right_adjustment*35*-1, that.pos[1] + coordinates_right[1]/right_adjustment*35*-1)
 			ctx.closePath();
 			ctx.fillStyle = "white";
 			ctx.fill();
@@ -97,6 +92,7 @@
     if ( otherObject instanceof Asteroids.Ship ) {
 			$(".losing-message").addClass("active");
 			clearInterval(Asteroids.intervalId);
+			$(".play-again").toggleClass("active");
 			return;
     };
 

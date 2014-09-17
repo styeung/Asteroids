@@ -4,7 +4,7 @@
   }
 
   var Ship = Asteroids.Ship = function (game){
-    Asteroids.MovingObject.call(this, {pos: [400, 400],
+    Asteroids.MovingObject.call(this, {pos: [300, 300],
                        color: Ship.COLOR,
                        radius: Ship.RADIUS,
 											 degree: 0,
@@ -13,13 +13,13 @@
                        game: game})
   };
 
-  Ship.RADIUS = 10;
+  Ship.RADIUS = 1;
   Ship.COLOR = Asteroids.Util.randomColor();
 
   Asteroids.Util.inherits(Ship, Asteroids.MovingObject);
 
   Ship.prototype.relocate = function() {
-    this.pos = [400,400];
+    this.pos = [300,300];
     this.vel = [0,0];
   }
 

@@ -10,10 +10,10 @@
 		this.ammo = 50;
   };
 
-  Game.DIM_X = 800;
-  Game.DIM_Y = 800;
+  Game.DIM_X = 600;
+  Game.DIM_Y = 600;
 
-  Game.NUM_ASTEROIDS = 12;
+  Game.NUM_ASTEROIDS = 10;
 	
   Game.prototype.addAsteroids = function () {
     var outputArray = [];
@@ -28,9 +28,9 @@
   };
 
   Game.prototype.draw = function (ctx) {
-    ctx.clearRect(0,0,800,800);
+    ctx.clearRect(0,0,600,600);
 		ctx.fillStyle = "black";
-		ctx.fillRect(0, 0, 800, 800);
+		ctx.fillRect(0, 0, 600, 600);
     this.allObjects().forEach(function(object) {
       object.draw(ctx);
     });
@@ -43,13 +43,13 @@
   };
 
   Game.prototype.wrap = function (pos) {
-    pos[0] = (pos[0] > 800 ? pos[0] % Game.DIM_X : pos[0])
+    pos[0] = (pos[0] > 600 ? pos[0] % Game.DIM_X : pos[0])
 
-    pos[1] = (pos[1] > 800 ? pos[1] % Game.DIM_Y : pos[1])
+    pos[1] = (pos[1] > 600 ? pos[1] % Game.DIM_Y : pos[1])
 
-    pos[0] = (pos[0] < 0 ? pos[0] += 800 : pos[0])
+    pos[0] = (pos[0] < 0 ? pos[0] += 600 : pos[0])
 
-    pos[1] = (pos[1] < 0 ? pos[1] += 800 : pos[1])
+    pos[1] = (pos[1] < 0 ? pos[1] += 600 : pos[1])
 
     return pos
   };
@@ -76,11 +76,13 @@
 		if(this.asteroids.length < 1) {
 			$(".winning-message").addClass("active");
 			clearInterval(Asteroids.intervalId);
+			$(".play-again").toggleClass("active");
 			
 		}
 		else if(this.ammo < 1) {
 			$(".losing-message").addClass("active");
 			clearInterval(Asteroids.intervalId);
+			$(".play-again").toggleClass("active");
 		}
   };
 

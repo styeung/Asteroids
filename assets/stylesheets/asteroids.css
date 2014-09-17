@@ -1,4 +1,4 @@
-html, body, header, div, ul, li, h1, h2, h3, h4, h5, p, a {
+html, body, header, div, ul, li, h1, h2, h3, h4, h5, p, a, button {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -8,23 +8,23 @@ html, body, header, div, ul, li, h1, h2, h3, h4, h5, p, a {
 }
 
 h1 {
-	font-size: 80px;
+	font-size: 34px;
 	text-align: center;
 }
 
 p {
 	text-align: center;
-	font-size: 25px;
+	font-size: 18px;
 }
 
 .ammo {
-	font-size: 50px;
+	font-size: 24px;
 	text-align: center;
 }
 
 body {
 	font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
-	width: 800px;
+	width: 610px;
 	margin: auto;
 }
 
@@ -37,9 +37,9 @@ body {
 	display: none;
 	color: white;
 	font-weight: bold;
-	font-size: 80px;
-	left: 220px;
-	top: 200px;
+	font-size: 62px;
+	left: 160px;
+	top: 160px;
 }
 
 .losing-message.active{
@@ -51,11 +51,36 @@ body {
 	display: none;
 	color: white;
 	font-weight: bold;
-	font-size: 80px;
-	left: 220px;
-	top: 200px;
+	font-size: 68px;
+	left: 160px;
+	top: 160px;
 }
 
 .winning-message.active {
+	display: block;
+}
+
+.play-again-container {
+	position: relative;
+}
+
+.play-again {
+	position: absolute;
+	display: none;
+	background-color: #56BE00;
+	padding: 20px 30px;
+	border-radius: 15px;
+	color: white;
+	font-size: 20px;
+	left: 230px;
+	top: 250px;
+}
+
+.play-again:hover {
+	cursor: pointer;
+	background-color: #449500; 
+}
+
+.play-again.active {
 	display: block;
 }

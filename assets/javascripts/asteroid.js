@@ -14,7 +14,7 @@
 
   Asteroids.Util.inherits(Asteroid, Asteroids.MovingObject);
 
-  Asteroid.RADIUS = 35;
+  Asteroid.RADIUS = 22;
 
   var HEX_DIGITS = "0123456789ABCDEF";
   Asteroid.COLOR = Asteroids.Util.randomColor();
