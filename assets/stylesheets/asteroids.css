@@ -1,3 +1,5 @@
+/* Setting Defaults */
+
 html, body, header, div, ul, li, h1, h2, h3, h4, h5, p, a, button {
 	padding: 0;
 	margin: 0;
@@ -5,6 +7,12 @@ html, body, header, div, ul, li, h1, h2, h3, h4, h5, p, a, button {
 	font-family: inherit;
 	-webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.008);
+}
+
+body {
+	font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+	width: 610px;
+	margin: auto;
 }
 
 h1 {
@@ -17,15 +25,11 @@ p {
 	font-size: 18px;
 }
 
+/* Text Styles */
+
 .ammo {
 	font-size: 24px;
 	text-align: center;
-}
-
-body {
-	font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
-	width: 610px;
-	margin: auto;
 }
 
 .message-container {
